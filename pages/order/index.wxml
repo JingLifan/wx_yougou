@@ -1,0 +1,2 @@
+<!--pages/order/index.wxml-->
+<Tabs tabs="{{tabs}}" bindhandleItemChange="handleItemChange">{{content}}</Tabs>

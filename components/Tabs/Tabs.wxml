@@ -1,0 +1,17 @@
+<!--components/Tabs/Tabs.wxml-->
+<view class="tabs">
+    <view class="tabs_title">
+        <view class="title_item {{item.isActive?'active':''}}"
+        wx:for="{{tabs}}"
+        wx:key="id"
+        bind:tap="getItemIndex"
+        data-index="{{index}}">
+        {{item.value}}
+        </view>
+    </view>
+    <view class="tabs_content">
+    <!-- slot标签用来装内容部分 -->
+        <slot></slot>    
+    </view>
+</view>
+  

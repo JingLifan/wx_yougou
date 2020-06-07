@@ -1,0 +1,14 @@
+<!--pages/search/index.wxml-->
+<view class="search_row">
+    <input value="{{inputValue}}" placeholder="请输入您想搜索的商品" bindinput="handleinput"></input>
+    <!-- 当标签需要频繁隐藏显示时，用hidden最佳 -->
+    <button hidden="{{!isFocus}}" bind:tap="handleCancel">取消</button>
+</view>
+<view class="search_content">
+    <navigator class="search_item"
+    url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+    wx:for="{{goods}}"
+    wx:key="goods_id">
+    {{item.goods_name}}
+    </navigator>
+</view>
